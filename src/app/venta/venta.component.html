@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container mx-auto p-6">
+        <div class="flex justify-between items-center flex-wrap justify-center mt-8 mx-24">
+            <h1 class="text-3xl font-semibold mb-0">Productos</h1>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <!-- Cards Section -->
+            <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
+                <!-- Card Example -->
+                <div class="bg-white border border-gray-200 rounded-lg shadow flex w-80 h-28 relative" *ngFor="let producto of productos; let i = index">
+                    <button
+                    class="absolute top-2 right-2 text-gray-500 hover:text-red-700 text-lg font-bold"
+                    (click)="eliminarProducto(i)">
+                    &times;
+                    </button>
+                    <img class="object-cover w-32 rounded-l-lg h-full" src="/assets/tomate.png" alt="Tomate">
+                    <div class="p-2 flex flex-col justify-between">
+                        <h5 class="text-lg font-bold text-gray-900">{{producto.nombre}}</h5>
+                        <p class="text-green-600 text-sm">{{producto.precio | currency}}{{producto.tipo}}</p>
+                        <p>{{subtotal}}</p>
+                        <div class="flex items-center border border-gray-200 rounded-full px-5 w-32">
+                            <input
+                                type="number"
+                                [value]="producto.cantidad"
+                                (input)="updateCantidad(producto, $event)"
+                                class="text-black font-bold text-sm bg-transparent border-none focus:outline-none focus:ring-0 w-full py-1 px-2">
+                            <svg class="w-5 h-5 ml-2 text-gray-500 cursor-pointer hover:text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20h9"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.72 11.06a1 1 0 010 1.41l-7.34 7.34a1 1 0 01-.61.28h-.49l-1.92-.48a1 1 0 01-.76-.76l-.48-1.92v-.49a1 1 0 01.28-.61l7.34-7.34a1 1 0 011.41 0zM20.21 3.79a1 1 0 00-1.41 0l-2.83 2.83a1 1 0 000 1.41l1.42 1.42a1 1 0 001.41 0l2.83-2.83a1 1 0 000-1.41l-1.42-1.42z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary Section -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow p-4">
+                <h2 class="text-xl font-bold mb-4">Order summary</h2>
+                <div class="mb-2 flex justify-between">
+                    <span>Subtotal</span>
+                    <span>{{ subtotal | currency }}</span>
+                </div>
+                <div class="mb-2 flex justify-between">
+                    <span>Shipping</span>
+                    <span>{{ shipping | currency }}</span>
+                </div>
+                <div class="mb-2 flex justify-between">
+                    <span>Tax</span>
+                    <span>{{ tax | currency }}</span>
+                </div>
+                <div class="mb-4 flex justify-between font-bold">
+                    <span>Total</span>
+                    <span>{{ total | currency }}</span>
+                </div>
+                <button class="w-full bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Continue to payment</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

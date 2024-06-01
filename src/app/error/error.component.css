@@ -1,0 +1,71 @@
+.error-container {
+    text-align: center;
+    margin-top: 100px;
+    padding: 0 20px; /* Añadido para margen interno en pantallas pequeñas */
+}
+
+.error-container h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.error-container p {
+    font-size: 18px;
+    color: #666;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header nav {
+        margin-top: 10px;
+    }
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+    .error-container h1 {
+        font-size: 28px; /* Reducción del tamaño de la fuente */
+    }
+    .error-container p {
+        font-size: 16px; /* Reducción del tamaño de la fuente */
+    }
+}
+
+@media (max-width: 480px) {
+    .error-container {
+        margin-top: 50px; /* Reducción del margen superior */
+    }
+    .error-container h1 {
+        font-size: 24px; /* Reducción adicional del tamaño de la fuente */
+    }
+    .error-container p {
+        font-size: 14px; /* Reducción adicional del tamaño de la fuente */
+    }
+    .btn {
+        padding: 8px 16px; /* Ajuste del padding del botón */
+        font-size: 14px; /* Ajuste del tamaño de la fuente del botón */
+    }
+}
