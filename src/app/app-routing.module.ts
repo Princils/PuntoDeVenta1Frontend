@@ -6,9 +6,10 @@ import { VentaComponent } from './venta/venta.component';
 import { ProductonewComponent } from './productonew/productonew.component';
 import { LoginComponent } from './login/login.component';
 import { MostrarVentasComponent } from './mostrar-ventas/mostrar-ventas.component';
+import { PrincipalComponent } from './principal/principal.component';
 
 const routes: Routes = [
-  {path:"home",component:HomeComponent},
+  {path:"principal",component:PrincipalComponent},
   {path:"error",component:ErrorComponent},
   {path:"venta",component:VentaComponent},
   {path:"productonew",component:ProductonewComponent},

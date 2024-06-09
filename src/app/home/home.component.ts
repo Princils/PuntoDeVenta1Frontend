@@ -8,19 +8,19 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   productos = [
     {
-      nombre: 'Tomate',
+      nombre: 'Clavos',
       precio: '$5.99 / kg',
-      imagen: 'ruta-a-la-imagen-de-tomate'
+      imagen: 'https://acerosycomplementos.com.mx/wp-content/uploads/2018/04/Clavo_estandar_image_4-500x390.jpg'
     },
     {
-      nombre: 'Jengibre',
+      nombre: 'Martillo',
       precio: '$12.99 / kg',
-      imagen: 'ruta-a-la-imagen-de-jengibre'
+      imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFTvEYAvfklA-CRXzXfVeTcegVncxfluTveA&s'
     },
     {
       nombre: 'Tomate',
       precio: '$5.99 / kg',
-      imagen: 'ruta-a-la-imagen-de-tomate'
+      imagen: 'https://acerosycomplementos.com.mx/wp-content/uploads/2018/04/Clavo_estandar_image_4-500x390.jpg'
     }
   ];
 }

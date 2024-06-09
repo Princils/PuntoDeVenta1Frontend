@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { initFlowbite } from 'flowbite';
 import { ModalService } from './modal.service';
 import { Subscription } from 'rxjs';
@@ -8,7 +8,14 @@ import { Subscription } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent  {
+
+export class AppComponent implements OnInit {
   title = 'PuntoDeVenta_Beta1';
  
+
+
+  ngOnInit(): void {
+    initFlowbite();
+  }
+
 }
