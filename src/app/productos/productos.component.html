@@ -1,0 +1,58 @@
+<div class="container max-w-screen-xl px-6 mx-auto">
+    <main class="mt-6">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-4xl font-bold">Productos</h2>
+        <button (click)="openModal()" type="button" class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800 ">
+          Producto Nuevo
+        </button>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white shadow-md rounded">
+          <thead>
+            <tr>
+              <th class="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                Producto
+              </th>
+              <th class="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                Precio
+              </th>
+              <th class="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                Precio promedio
+              </th>
+              <th class="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                Inventario
+              </th>
+              <th class="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                Acciones
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let venta of venta">
+              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                {{ venta.cliente }}
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                {{ venta.cantidad }}
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                ${{ venta.precio }}
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                {{ venta.fecha }}
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
+                  <i class="fas fa-edit"></i>
+                </button>
+                <button type="button" class="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  
