@@ -7,12 +7,15 @@ import { ProductonewComponent } from './productonew/productonew.component';
 import { LoginComponent } from './login/login.component';
 import { MostrarVentasComponent } from './mostrar-ventas/mostrar-ventas.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { ProductosComponent } from './productos/productos.component';
 
 const routes: Routes = [
   {path:"principal",component:PrincipalComponent},
   {path:"error",component:ErrorComponent},
   {path:"venta",component:VentaComponent},
+  {path:"home",component:HomeComponent},
   {path:"productonew",component:ProductonewComponent},
+  {path:"productos",component:ProductosComponent},
   {path:"login",component:LoginComponent},
   {path:"mostrar-ventas",component:MostrarVentasComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Ruta por defecto

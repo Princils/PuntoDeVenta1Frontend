@@ -11,6 +11,7 @@ import { MostrarVentasComponent } from './mostrar-ventas/mostrar-ventas.componen
 import { ProductonewComponent } from './productonew/productonew.component';
 import { MenuComponent } from './menu/menu.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { ProductosComponent } from './productos/productos.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { PrincipalComponent } from './principal/principal.component';
     ProductonewComponent,
     MenuComponent,
     PrincipalComponent,
+    ProductosComponent,
     
   ],
   imports: [
