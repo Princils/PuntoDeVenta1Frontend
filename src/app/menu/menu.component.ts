@@ -9,7 +9,9 @@ import { ModalService } from '../modal.service';
 export class MenuComponent {
   constructor(private modalService: ModalService) {}
 
-  openModal() {
-    this.modalService.open();
+  isCollapsed = true;
+
+  toggleCollapse() {
+    this.isCollapsed = !this.isCollapsed;
   }
 }
